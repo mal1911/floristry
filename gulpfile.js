@@ -149,8 +149,6 @@ gulp.task('script-vendor', function () {
     .pipe(server.stream());
 });
 
-
-
 gulp.task('clean', function () {
   return del('build');
 });

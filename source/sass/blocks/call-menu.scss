@@ -1,0 +1,52 @@
+.call-menu {
+  @include menu();
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+
+  @include media-mobile {
+    display: none;
+  }
+}
+
+.call-menu__item:first-child {
+  flex-shrink: 0;
+}
+
+.call-menu__phone-link {
+  font-size: 18px;
+  line-height: 1.111;
+  color: rgb(28, 28, 28);
+
+  @include font-roboto-bold();
+
+  transition-duration: 500ms;
+  transition-property: opacity;
+
+  &:hover,
+  &:active {
+    opacity: 0.4;
+  }
+
+  @include media-tablet {
+    font-size: 14px;
+    line-height: 1.429;
+  }
+}
+
+.call-menu__button-link {
+  margin-left: 26px;
+  border-color: $color-green;
+  background-color: $color-green;
+  font-size: 16px;
+
+  @include font-roboto-medium();
+  color: $color-black;
+  text-align: center;
+  padding: 12px 35px;
+  margin-top: -13px;
+  max-width: 200px;
+
+  @include media-tablet {
+    display: none;
+  }
+}

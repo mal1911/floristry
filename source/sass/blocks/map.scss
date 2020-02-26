@@ -1,0 +1,89 @@
+.map {
+  @include media-mobile {
+    padding-top: 37px;
+  }
+}
+
+.map__container {
+  background-image: url("../img/map-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 807px;
+  position: relative;
+  border-bottom: 2px solid $color-green;
+  z-index: 1;
+
+  @include retina {
+    background-image: url("../img/map-desktop@2x.png");
+  }
+
+  @include media-tablet {
+    height: 348px;
+    background-image: url("../img/map-tablet@1x.png");
+
+    @include retina {
+      background-image: url("../img/map-tablet@2x.png");
+    }
+  }
+
+  @include media-mobile {
+    margin-top: 15px;
+    width: 100%;
+    background-position: top center;
+    height: 196px;
+    background-image: url("../img/map-mobile@1x.png");
+
+    @include retina {
+      background-image: url("../img/map-mobile@2x.png");
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/ballon-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 72px;
+    height: 98px;
+    top: 37.5%;
+    left: 49.5%;
+    z-index: -1;
+
+    @include retina {
+      background-image: url("../img/ballon-desktop@2x.png");
+    }
+
+    @include media-tablet {
+      background-image: url("../img/ballon-tablet.svg");
+      width: 22px;
+      height: 28px;
+      top: 46.5%;
+      left: 49.5%;
+    }
+
+    @include media-mobile {
+      left: 43%;
+      top: 50%;
+    }
+  }
+}
+
+.map__title {
+  display: none;
+
+  @include media-mobile {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-left: 20px;
+    display: inline;
+
+    @include font-raleway-black();
+    font-size: 20px;
+    color: $color-black;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+}

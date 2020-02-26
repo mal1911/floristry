@@ -1,0 +1,248 @@
+.form {
+  box-sizing: border-box;
+  position: absolute;
+  top: -252px;
+  left: 49.5%;
+  transform: translateX(-50%);
+  width: 580px;
+  background-color: $color-white;
+  padding-left: 70px;
+  padding-right: 105px;
+  padding-bottom: 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+
+  @include media-tablet {
+    left: 0;
+    transform: none;
+    top: -140px;
+    width: 411px;
+    padding-left: 49px;
+    padding-right: 49px;
+    padding-bottom: 29px;
+  }
+
+  @include media-mobile {
+    left: auto;
+    top: auto;
+    position: static;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 61px;
+  }
+}
+
+.form div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 23px;
+
+  @include media-tablet {
+    margin-top: 22px;
+  }
+}
+
+.form h2 {
+  font-size: 25px;
+
+  @include font-raleway-black();
+  color: $color-black;
+  text-transform: uppercase;
+  line-height: 2;
+  text-align: center;
+  margin-left: 30px;
+  margin-top: 43px;
+  margin-bottom: 20px;
+  width: 100%;
+  letter-spacing: 1px;
+
+  @include media-tablet {
+    font-size: 18px;
+    line-height: 1.978;
+    margin-left: 0;
+    margin-top: 30px;
+    margin-bottom: 4px;
+  }
+
+  @include media-mobile {
+    margin-top: 40px;
+    margin-bottom: -5px;
+  }
+}
+
+.form__control {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 20px;
+  letter-spacing: 1px;
+  height: 75px;
+  width: 100%;
+  margin-bottom: 20px;
+
+  input,
+  textarea {
+    resize: none;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border: none;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    height: 28px;
+    overflow-y: hidden;
+
+    @include font-roboto-regular();
+    color: $color-black;
+    line-height: 2.5;
+  }
+
+  @include media-tablet {
+    font-size: 14px;
+    height: 68px;
+    margin-bottom: 0;
+
+    input,
+    textarea {
+      font-size: 14px;
+      line-height: 20px;
+      height: 20px;
+    }
+  }
+
+  @include media-mobile {
+    input,
+    textarea {
+      height: 20px;
+    }
+  }
+}
+
+.form__control--name,
+.form__control--phone {
+  width: 45%;
+
+  @include media-tablet {
+    width: 49%;
+  }
+}
+
+.form__control--phone {
+  @include media-tablet {
+    width: 49%;
+  }
+
+  @include media-mobile {
+    width: 43%;
+  }
+}
+
+.form__control--name {
+  @include media-tablet {
+    width: 41%;
+  }
+}
+
+.form__control--message {
+  margin-top: -3px;
+  margin-bottom: 0;
+  padding-top: 7px;
+
+  @include media-tablet {
+    margin-top: 3px;
+    height: 52px;
+    padding-top: 0;
+  }
+
+  @include media-mobile {
+    margin-top: 0;
+    padding-top: 3px;
+  }
+}
+
+.form p {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.502);
+  line-height: 1.5;
+  text-align: center;
+  max-width: 310px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+  margin-left: 34px;
+
+  &::after {
+    margin-top: 2px;
+    content: "";
+    border-width: 1px;
+    border-color: $color-black;
+    border-style: dashed;
+    opacity: 0.4;
+    width: 187px;
+  }
+
+  a {
+    color: rgba(0, 0, 0, 0.502);
+    transition-duration: 500ms;
+    transition-property: color;
+  }
+
+  a:hover {
+    color: $color-black;
+  }
+
+  @include media-tablet {
+    font-size: 10px;
+    line-height: 12.82px;
+    margin-top: 4px;
+    margin-left: 0;
+    max-width: 250px;
+
+    &::after {
+      width: 155px;
+    }
+
+    @include media-mobile {
+      margin-top: 12px;
+      max-width: 255px;
+    }
+  }
+}
+
+.form button {
+  border-color: $color-black;
+  background-color: $color-black;
+  color: $color-white;
+
+  @include font-raleway-bold();
+  line-height: 2;
+  font-size: 25px;
+  width: 233px;
+  margin-top: 20px;
+  margin-left: 35px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  &:hover,
+  &:active {
+    box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.3);
+  }
+
+  @include media-tablet {
+    font-size: 16px;
+    line-height: 35.6px;
+    width: 166px;
+    margin-top: 15px;
+    margin-left: 0;
+    padding-top: 0;
+    padding-bottom: 4px;
+  }
+
+  @include media-mobile {
+    margin-top: 20px;
+  }
+}

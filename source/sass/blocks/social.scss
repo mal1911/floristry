@@ -1,120 +1,89 @@
 .social {
   @include menu();
-  margin-top: 47px;
-  margin-left: 0;
-  order: 10;
-
-  @include media-tablet {
-    margin-top: 10px;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  @include media-mobile {
-    margin-left: 20px;
-    margin-top: 0;
-  }
-}
-
-.social span {
-  @include visually-hidden();
-}
-
-.social__item {
-  margin-right: 30px;
-
-  @include media-tablet {
-    margin-right: 20px;
-
-    &:nth-child(2n) {
-      margin-right: 25px;
-    }
-  }
-
-  @include media-mobile {
-    margin-right: 36px;
-
-    &:nth-child(2n) {
-      margin-right: 38px;
-    }
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
 }
 
 .social__link {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 0.3;
-  width: 35px;
-  height: 35px;
   display: block;
-  transition-duration: 500ms;
-  transition-property: opacity;
-  cursor: pointer;
+  width: 25px;
+  height: 25px;
 
-  &:hover {
-    opacity: 1;
-  }
-
-  &--vk {
-    background-image: url("../img/vk.svg");
-    width: 35px;
-    height: 21px;
-  }
-
-  &--twitter {
-    background-image: url("../img/twitter.svg");
-    width: 27px;
-    height: 22px;
-  }
-
-  &--fb {
-    background-image: url("../img/fb.svg");
-    width: 14px;
-    height: 26px;
-  }
+  background-repeat: no-repeat;
+  opacity: 0.7;
 
   @include media-tablet {
-    width: 23px;
-    height: 23px;
+    width: 56px;
+    height: 55px;
+  }
 
-    &--vk {
-      width: 23px;
-      height: 13px;
-    }
+  @include media-mobile {
+    width: 35px;
+    height: 35px;
+  }
 
-    &--twitter {
-      width: 17px;
-      height: 14px;
-    }
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
+}
 
-    &--fb {
-      width: 8px;
-      height: 15px;
-    }
+.social__link span {
+  @include visually-hidden();
+}
+
+.social__link--fb {
+  background-image: url("../img/fb-desktop.svg");
+
+  @include media-tablet {
+    background-image: url("../img/fb-tablet.svg");
+  }
+
+  @include media-mobile {
+    background-image: url("../img/fb-mobile.svg");
+  }
+}
+
+.social__link--inst {
+  background-image: url("../img/inst-desktop.svg");
+
+  @include media-tablet {
+    background-image: url("../img/inst-tablet.svg");
+  }
+
+  @include media-mobile {
+    background-image: url("../img/inst-mobile.svg");
+  }
+}
+
+.social__link--vk {
+  background-image: url("../img/vk-desktop.svg");
+
+  @include media-tablet {
+    background-image: url("../img/vk-tablet.svg");
+  }
+
+  @include media-mobile {
+    background-image: url("../img/vk-mobile.svg");
+  }
+}
+
+.social__link--whatsapp {
+  width: 27px;
+  height: 27px;
+
+  background-image: url("../img/whatsapp-desktop.svg");
+
+  @include media-tablet {
+    width: 56px;
+    height: 55px;
+
+    background-image: url("../img/whatsapp-tablet.svg");
   }
 
   @include media-mobile {
     width: 35px;
     height: 35px;
 
-    &--vk {
-      width: 35px;
-      height: 21px;
-    }
-
-    &--twitter {
-      width: 27px;
-      height: 22px;
-    }
-
-    &--fb {
-      width: 14px;
-      height: 26px;
-    }
+    background-image: url("../img/whatsapp-mobile.svg");
   }
 }
+

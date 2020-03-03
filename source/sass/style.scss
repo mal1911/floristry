@@ -3,15 +3,16 @@
 @import "fonts";
 @import "mixins";
 @import "common";
+@import "blocks/main";
 @import "blocks/container";
 @import "blocks/header";
-
+@import "blocks/banner";
+@import "blocks/social";
 /*
 @import "blocks/button";
 
 @import "blocks/main-menu";
 @import "blocks/call-menu";
-@import "blocks/banner";
 @import "blocks/advantages";
 @import "blocks/partners";
 @import "blocks/services";
@@ -22,5 +23,4 @@
 @import "blocks/info";
 @import "blocks/contacts";
 @import "blocks/bottom-menu";
-@import "blocks/social";
 */
